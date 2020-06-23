@@ -1,0 +1,10 @@
+.DS_Store
+.APPleDouble
+.LSOverride
+.vs
+
+
+node_modules/
+app/scss/
+app/pug/
+package-lock.json
