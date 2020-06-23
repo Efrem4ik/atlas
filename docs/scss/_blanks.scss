@@ -1,0 +1,32 @@
+.breadcrumbs {
+  &__inner {
+    // Позиционируем 45px сверху, 40px вниз
+    padding: 45px 0 40px;
+  }
+  &__list {
+    li {
+      // Выстраиваем в ряд
+      display: inline-block;
+      position: relative;
+      & + li {
+        padding-left: 24px;
+        &::before {
+          // Тире "-" между словами
+          content: "-";
+          position: absolute;
+          left: 8px;
+        }
+      }
+      &:last-child {
+        //Цвет для последнего элемента
+        a,
+        span {
+          color: ;
+        }
+      }
+    }
+    a {
+      color: ;
+    }
+  }
+}
