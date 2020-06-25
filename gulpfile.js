@@ -1,7 +1,7 @@
 let gulp = require('gulp'),
   sass = require('gulp-sass'),
   rename = require('gulp-rename');
-  browserSync = require('browser-sync'),
+browserSync = require('browser-sync'),
   autoprefixer = require('gulp-autoprefixer'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
@@ -9,7 +9,7 @@ let gulp = require('gulp'),
   pug = require('gulp-pug');
 
 gulp.task('sass', function () {
-  return gulp.src('app/scss/**/*.scss')
+  return gulp.src('docs/scss/**/*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     }))
@@ -19,19 +19,21 @@ gulp.task('sass', function () {
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 8 versions']
     }))
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(browserSync.reload({
       stream: true
     }))
 });
 
-gulp.task('pug', function(){
-  return gulp.src('app/pug/index.pug',)
-      .pipe(pug({
-           pretty: true
-       }))
-      .pipe(gulp.dest('app/'))
-      .pipe(browserSync.reload({stream: true}))
+gulp.task('pug', function () {
+  return gulp.src('docs/pug/index.pug', )
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('docs/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 });
 
 gulp.task('script', function () {
@@ -43,13 +45,13 @@ gulp.task('script', function () {
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
+    .pipe(gulp.dest('docs/js'))
 });
 gulp.task('script-js', function () {
-  return gulp.src(['app/js/main.js'])
+  return gulp.src(['docs/js/main.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('app/js'))
+    .pipe(gulp.dest('docs/js'))
 });
 
 
@@ -64,18 +66,18 @@ gulp.task('style', function () {
     ])
     .pipe(concat('libs.min.css'))
     .pipe(cssmin())
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('docs/css'))
 });
 
 gulp.task('html', function () {
-  return gulp.src('app/*.html')
+  return gulp.src('docs/*.html')
     .pipe(browserSync.reload({
       stream: true
     }))
 });
 
 gulp.task('js', function () {
-  return gulp.src('app/js/*.js')
+  return gulp.src('docs/js/*.js')
     .pipe(browserSync.reload({
       stream: true
     }))
@@ -84,16 +86,16 @@ gulp.task('js', function () {
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
-      baseDir: "app/"
+      baseDir: "docs/"
     }
   });
 });
 
 gulp.task('watch', function () {
-  gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'))
-  gulp.watch('app/**/*.html', gulp.parallel('html'))
-  gulp.watch('app/js/*.js', gulp.parallel('js'))
-  gulp.watch('app/pug/**/*.pug', gulp.parallel('pug'))
+  gulp.watch('docs/scss/**/*.scss', gulp.parallel('sass'))
+  gulp.watch('docs/**/*.html', gulp.parallel('html'))
+  gulp.watch('docs/js/*.js', gulp.parallel('js'))
+  gulp.watch('docs/pug/**/*.pug', gulp.parallel('pug'))
 });
 
 gulp.task('start', gulp.parallel('sass', 'watch', 'browser-sync', 'script', 'script-js', 'style', 'pug'))

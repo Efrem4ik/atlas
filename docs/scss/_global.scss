@@ -28,11 +28,9 @@ li {
   list-style: none;
 }
 body {
-  // font-family: ;
-  // font-weight: ;
-  // font-size: ;
-  // line-height: ;
-  // color: ;
+  @include opensansB;
+  font-size: 16px;
+  background-color: #fff;
   position: relative;
   overflow-x: hidden;
 }
@@ -48,7 +46,17 @@ body {
   flex: 0 0 auto;
 }
 .container {
-  // max-width: ;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 20px;
+}
+.btn {
+  padding: 17px 19px;
+  background-color: transparent;
+  border: 2px solid $red;
+  border-radius: 4px;
+  font-size: 18px;
+  color: $red;
+  cursor: pointer;
+  outline-color: #ff1938;
 }

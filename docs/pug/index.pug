@@ -1,22 +1,11 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    title Название проекта
-    link(rel="stylesheet" href="css/libs.min.css")
-    link(rel="stylesheet" href="css/style.min.css")
-  body
-    .wrapper
-      .content
-        include modules/header
-          .compres
-            a(href='#')
-        section.main
-        footer.footer
-
-
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-    script(src="js/libs.min.js")
-    script(src="js/main.js")
+extends layout/layout
+block vars
+  - var title = 'Главная'
+block header
+  include modules/header
+block main
+  include modules/index/main
+block footer
+  include modules/footer
+block scripts
+  include modules/index/scripts

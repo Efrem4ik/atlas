@@ -1,0 +1,25 @@
+$gray: #666666;
+$red: #cd2f43;
+
+
+
+@mixin opensansB {
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: normal;
+}
+@mixin opensansE {
+  font-family: "OpenSans-ExtraBold", sans-serif;
+  font-weight: normal;
+}
+@mixin opensansR {
+  font-family: "OpenSans-Regular", sans-serif;
+  font-weight: normal;
+}
+@mixin opensansS {
+  font-family: "OpenSans-SemiBold", sans-serif;
+  font-weight: normal;
+}
+@mixin latoH {
+  font-family: "Lato-Heavy", sans-serif;
+  font-weight: normal;
+}

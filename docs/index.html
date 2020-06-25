@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Название проекта</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -12,21 +12,70 @@
     <div class="wrapper">
       <div class="content">
         <header class="header">
-          <nav class="header__menu">
-            <ul class="header__list">
-              <li class="header__list-item"> <a class="header__list-link">Меню</a></li>
-              <li class="header__list-item"> <a class="header__list-link">Новости</a></li>
-              <li class="header__list-item"> <a class="header__list-link">О Нас
-                  <div class="compres"><a href="#"></a></div></a></li>
-            </ul>
-          </nav>
+          <div class="header__navigation">
+            <div class="container">
+              <nav class="header__top-navigation">
+                <ul class="header__top-list">
+                  <li class="header__list-item"><a class="header__list-link" href="#">О компании</a></li>
+                  <li class="header__list-item"><a class="header__list-link" href="#">Новости</a></li>
+                  <li class="header__list-item"><a class="header__list-link" href="#">Контакты</a></li>
+                  <li class="header__list-item"><a class="header__list-link" href="#">FAQ</a></li>
+                  <li class="header__list-item"><a class="header__list-link" href="#">Доставка</a></li>
+                  <li class="header__list-item"><a class="header__list-link" href="#">Оплата</a></li>
+                </ul>
+                <ul class="header__list-enter">
+                  <li class="header__enter-item"><a class="header__enter-link header__enter-lk" href="#">Личный кабинет</a></li>
+                  <li class="header__enter-item"><a class="header__enter-link" href="#">Регистрация</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="header__body">
+            <div class="container">
+              <div class="header__body-inner"><img class="header__logo" src="images/index/logo.png" alt="Logotype">
+                <div class="header__body-address-wrapper"><a class="header__address-link" href="#">Москва, ул. Профсоюзная, д. 76</a><span class="header__address-time">Ежедневно 08:00 до 22:00</span></div>
+                <div class="header__body-contacts-wrapper"><a class="header__body-tel" href="tel:84952034411">8 (495) 203-44-11</a><a class="header__body-tel--second" href="tel:89652118888">8 (965) 211-8888 </a></div>
+                <div class="header__body-recall">
+                  <button class="header__body-btn btn">Обратный звонок</button>
+                </div>
+                <div class="header__body-social-wrapper"><a class="header__body-social--ws" href="#">Whatsapp</a><a class="header__body-social--inst" href="#">Мы в Инстаграмм</a><a class="header__body-social--site" href="#">shop@atlas-italy.ru</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <div class="header__bottom-link">
+              <div class="header__bottom--red-color"></div>
+            </div>
+            <div class="container">
+              <div class="header__bottom-inner">
+                <div class="header__bottom-catalog">Каталог</div>
+                <ul class="header__bottom-list">
+                  <li class="header__bottom-item"><a class="bottom__item-link" href="#">Сопутствующие товары</a></li>
+                  <li class="header__bottom-item"><a class="bottom__item-link" href="#">Сантехника</a></li>
+                  <li class="header__bottom-item"><a class="bottom__item-link" href="#">Акции</a></li>
+                  <li class="header__bottom-item"><a class="bottom__item-link" href="#">Расширенный поиск</a></li>
+                </ul>
+                <div class="header__bottom-personal">
+                  <div class="header__bottom-favourites"><img src="images/index/icons/favourite.png" alt="Personal cart"><span>Пусто</span></div>
+                  <div class="header__bottom-cart"><img src="images/index/icons/cart.png" alt="Favourite"></div>
+                </div>
+              </div>
+            </div>
+            <div class="header__help">
+              <div class="header__help-wrapper"></div>
+              <div class="container">
+                <div class="header__help-inner">
+                  <div class="header__help-collection">Список коллекций</div>
+                  <div class="header__help-search">Поможем найти</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </header>
-        <section class="main"></section>
-        <footer class="footer"></footer>
       </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="js/libs.min.js"></script>
+      <script src="js/main.js"></script>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/libs.min.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

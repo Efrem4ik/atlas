@@ -1,9 +1,65 @@
 header.header
-  nav.header__menu
-    ul.header__list
-      li.header__list-item 
-        a.header__list-link Меню
-      li.header__list-item 
-        a.header__list-link Новости
-      li.header__list-item 
-        a.header__list-link О Нас
+  .header__navigation
+    .container
+      nav.header__top-navigation
+        ul.header__top-list
+          li.header__list-item
+            a(href="#").header__list-link О компании
+          li.header__list-item
+            a(href="#").header__list-link Новости
+          li.header__list-item
+            a(href="#").header__list-link Контакты
+          li.header__list-item
+            a(href="#").header__list-link FAQ
+          li.header__list-item
+            a(href="#").header__list-link Доставка
+          li.header__list-item
+            a(href="#").header__list-link Оплата
+        ul.header__list-enter
+          li.header__enter-item
+            a(href="#").header__enter-link.header__enter-lk Личный кабинет
+          li.header__enter-item
+            a(href="#").header__enter-link Регистрация
+  .header__body
+    .container
+      .header__body-inner
+        img(src='images/index/logo.png' alt='Logotype').header__logo
+        .header__body-address-wrapper
+          a(href='#').header__address-link Москва, ул. Профсоюзная, д. 76
+          span.header__address-time Ежедневно 08:00 до 22:00
+        .header__body-contacts-wrapper
+          a(href='tel:84952034411').header__body-tel 8 (495) 203-44-11
+          a(href='tel:89652118888').header__body-tel--second 8 (965) 211-8888 
+        .header__body-recall
+          button.header__body-btn.btn Обратный звонок
+        .header__body-social-wrapper
+          a(href='#').header__body-social--ws Whatsapp
+          a(href='#').header__body-social--inst Мы в Инстаграмм
+          a(href='#').header__body-social--site shop@atlas-italy.ru
+  .header__bottom
+    .header__bottom-link
+      .header__bottom--red-color
+    .container
+      .header__bottom-inner
+        .header__bottom-catalog Каталог
+        ul.header__bottom-list
+          li.header__bottom-item
+            a(href="#" class='bottom__item-link') Сопутствующие товары
+          li.header__bottom-item
+            a(href="#" class='bottom__item-link') Сантехника
+          li.header__bottom-item
+            a(href="#" class='bottom__item-link') Акции
+          li.header__bottom-item
+            a(href="#" class='bottom__item-link') Расширенный поиск
+        .header__bottom-personal
+          .header__bottom-favourites
+            img(src="images/index/icons/favourite.png" alt="Personal cart")
+            span Пусто
+          .header__bottom-cart
+            img(src="images/index/icons/cart.png" alt="Favourite")
+    .header__help
+      .header__help-wrapper
+      .container
+        .header__help-inner
+          .header__help-collection Список коллекций
+          .header__help-search Поможем найти
